@@ -1,0 +1,81 @@
+.get-in-touch {
+  background: #eae4cf;
+  padding: 60px 0;
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .social-icons {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: left;
+  }
+
+  .news-letter {
+    input {
+      padding: 0 12px;
+      margin-right: 10px;
+      min-height: 50px;
+      font-size: 15px;
+      border: none;
+    }
+
+    input[type='button'] {
+      background: #ffa200;
+      color: #fff;
+      font-size: 18px;
+    }
+  }
+
+  p {
+    font-size: 19px;
+  }
+}
+
+@media(max-width: 1023px) {
+  .get-in-touch {
+    .wrapper {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .get-in-touch {
+    padding: 20px 0;
+
+    .container {
+      width: 100%;
+    }
+
+    .social-icons-wrapper {
+      padding-bottom: 20px;
+    }
+
+    .wrapper {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .news-letter {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+      width: 100%;
+      border-top: 1px solid #cfc9b3;
+
+      input {
+        margin: 0 10px;
+      }
+    }
+  }
+}

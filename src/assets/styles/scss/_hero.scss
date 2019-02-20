@@ -1,0 +1,146 @@
+.hero {
+  min-height: 500px;
+  background: url('../../images/desktop/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  .soc-icon-left {
+    position: absolute;
+    display: grid;
+    top: 100px;
+  }
+
+  .soc-icon-right {
+    position: absolute;
+    display: grid;
+    top: 100px;
+    right: 0;
+  }
+
+  .hero-wrapper {
+    display: grid;
+    align-items: center;
+    min-height: 500px;
+  }
+
+  .login {
+    max-width: 300px;
+    width: 100%;
+    padding: 20px;
+    background: #ffffffe0;
+    margin-left: auto;
+    text-align: center;
+
+    > p {
+      margin: 0;
+      font-size: 40px;
+    }
+
+    form {
+      text-align: left;
+
+      input {
+        width: 100%;
+        border: none;
+        padding: 14px 0;
+        background: transparent;
+        border-bottom: 1px solid #cdcdcd;
+        font-size: 18px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      p {
+        margin: 40px 0 0;
+        font-size: 18px;
+      }
+    }
+
+    button {
+      display: block;
+      width: 80%;
+      margin: 24px auto 10px;
+      padding: 20px;
+      background: $blue;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 27px;
+
+      img {
+        vertical-align: middle;
+      }
+    }
+    
+    .error-message {
+      padding: 16px 0 0;
+      text-align: center;
+      display: block;
+      color: #d30808;
+    }
+
+    .sign-up-btn {
+      text-align: center;
+      margin: 16px 0 0 !important;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+@media(max-width: 1140px) {
+  .hero {
+    .soc-icon-right {
+      display: none;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .hero {
+    &-wrapper {
+      align-items: end;
+    }
+
+    .soc-icon-left {
+      display: none;
+    }
+
+    .login {
+      max-width: 100%;
+      margin: auto auto 30px;
+      padding: 20px 0 0;
+
+      > p {
+        font-size: 24px;
+        margin-bottom: 16px;
+      }
+
+      form > div {
+        padding: 0 20px;
+      }
+
+      form .wrap {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: 12px;
+        align-items: center;
+      }
+
+      form .wrap > p {
+        margin: auto;
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+        margin-bottom: 0;
+        border-radius: 0;
+        font-size: 18px;
+      }
+    }
+  }
+}
